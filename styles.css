@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif; /*fontes que a pagina utiilizara,
+    sendo: Fonte principal, fonte backup*/
+    background-color: #f4f4f4; /*cor de fundo da pagina inteira*/
+}
+
+.header {
+    background-color: #4caf50; /* cor de fundo da classe*/
+    color: #ffffff; /*cor dos caracteres*/
+    text-align: center; /*alinhamento do caracters na tela*/
+    padding: 38px; /*tamanho interno da classe*/
+}
+
+.nav ul { /* utilizando o ul, isola apenas a tag <ul>*/
+    display: flex; /*layout responsivel, se adaptando a tela*/
+    flex-direction: row; /* direção ao qual o elementos 
+    que estão em flex tomaram*/
+    list-style: none;
+    text-align: center;
+    gap: 20px; /*distancia entre os elementos*/
+}
+
+.main-content {
+    padding: 20px;
+    /* trabalho com borda*/
+    border: dashed;
+    border-color: rgb(100, 21, 21);
+    border-width: 5px;
+    border-radius: 5px;
+    /*fim*/
+    text-align: justify;
+    background-color: #ffffff
+}
+
+.footer {
+    padding: 20px;
+}.footer p{
+    opacity: 0.8;/*opacidade do texto*/
+}
