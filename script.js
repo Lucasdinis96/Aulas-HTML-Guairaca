@@ -1,49 +1,35 @@
-console.log('Exercicio 1 - Verificação de Maioridade')
-function idade(){
-    let idade = 19
-    console.log('Idade: ',idade);
-    if(idade >=18){
-        console.log("Você é maior de idade.");
-    } else {
-        console.log('Você é menor de idade.');
-    }
+// Função Simples
+function exibirBoasVindas(){
+    return console.log("Olá, seja bem vindo!");
 }
-idade();
-console.log ('');
-console.log('Exercício 2 Par ou Ímpar')
-function parouimpar(){
-    let numero = 38
-    console.log('Número:', numero)
-    divisao = numero % 2;
-    if (divisao == 0){
-        return console.log('Par');
-    } else {
-        return console.log('Impar');
-    }
+
+exibirBoasVindas();
+
+// Função com parâmetros
+function soma(a,b,c){
+    const total = a+b+c;
+    return console.log("Total soma: ", total);
 }
-parouimpar();
-console.log ('');
-console.log('Exercício 3 - Verificação de Número Positivo, Negativo ou Zero.');
-function verificao() {
-    let numero = -54
-    console.log('Número:', numero);
-    if (numero>0) {
-        console.log("Positivo");
-    } else if (numero<0) {
-        console.log('Negativo');
-    } else {
-        console.log("Zero")
-    }
+
+soma (10,20,50);
+
+// Função Anônima
+const multiplicar = function(x,y){
+    return console.log("Resultado ",x*y);
 }
-verificao();
-console.log ('');
-console.log('Exercício 4 - Tabuada.')
-function tabuada(){
-    let numero = 1879;
-    console.log('Número: ',numero);
-    for (let i = 0; i < 11; i ++){
-        let total=numero*i;
-        console.log (numero,'x',i,'=',total)
-    }
+
+multiplicar(3,5);
+
+// Função Arrow Function
+const dividir = (a,b) => a/b;
+console.log("Divisão: ",dividir(10,2));
+
+// Função de Callback
+function inicializarProjeto() {
+    exibirBoasVindas();
+    soma(40,50,10);
+    multiplicar(10,6);
+    dividir(20,2);
 }
-tabuada();
+
+inicializarProjeto();
