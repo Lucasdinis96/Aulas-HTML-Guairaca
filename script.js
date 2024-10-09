@@ -1,35 +1,36 @@
-// Função Simples
-function exibirBoasVindas(){
-    return console.log("Olá, seja bem vindo!");
+// Seletor de elemento por ID
+function puxarElementoPorId(){
+   const titulo = document.getElementById('meuTitulo');
+   console.log(titulo);
+   titulo.textContent = "Titulo alterado";
 }
 
-exibirBoasVindas();
-
-// Função com parâmetros
-function soma(a,b,c){
-    const total = a+b+c;
-    return console.log("Total soma: ", total);
+// Seletor de elemento por classe
+function puxarElementoPorClasse(){
+   const subtitulo = document.getElementsByClassName('subtitulo');
+   console.log(subtitulo);
 }
 
-soma (10,20,50);
-
-// Função Anônima
-const multiplicar = function(x,y){
-    return console.log("Resultado ",x*y);
+// Seletor de elemento por tag
+function puxarElementoPorTag(){
+   const paragrafos = document.getElementsByTagName('p');
+   console.log(paragrafos);
 }
 
-multiplicar(3,5);
-
-// Função Arrow Function
-const dividir = (a,b) => a/b;
-console.log("Divisão: ",dividir(10,2));
-
-// Função de Callback
-function inicializarProjeto() {
-    exibirBoasVindas();
-    soma(40,50,10);
-    multiplicar(10,6);
-    dividir(20,2);
+// Função para criar a lista
+function criarLista(){
+   const container = document.getElementById('lista-container');
+   container.innerHTML = 
+   `
+   <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+   </ul>
+   `;
 }
 
-inicializarProjeto();
+function removerButao(){
+   const container = document.getElementById('lista-container');
+   container.innerHTML='';
+}
