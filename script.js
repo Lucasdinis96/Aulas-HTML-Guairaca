@@ -17,6 +17,8 @@ function calculadora (termo1,termo2,operacao) {
    if (operacao == "divisao"){
     resultado=termo1/termo2;
     return console.log(termo1,'/',termo2,"=",resultado);
+   } else {
+      return console.log("Operação Inválida!")
    }
 }
 calculadora (termo1,termo2,operacao);
