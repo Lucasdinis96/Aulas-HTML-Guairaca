@@ -2,19 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Aula 05 - Javascript</title>
-        <script src="script.js"></script>
+        <title>Aula formulário</title>
+        
     </head>
     <body>
-        <h1 id="meuTitulo">Aula 05 Javascript - Seletores de elemento</h1>
-        <button onclick="puxarElementoPorId()">Modificar texto</button>
-        <button onclick="puxarElementoPorClasse()">Por Classe</button>
-        <button onclick="puxarElementoPorTag()">Por Tag</button>
-        <h2 class="subtitulo">Subtitulo h2</h2>
-        <p>Paragrado de teste</p>
-        <div id="lista-container">
-        </div>
-        <button onclick="criarLista()">Criar Lista</button>
-        <button onclick="removerButao()">Fechar Lista</button>
+        <h1>Formulário de email</h1>
+        
+        <form id="emailForm">
+
+            <label for="to">Para: </label>
+            <input type="email" name="to" id="to" required>
+
+            <label for="subject">Assunto: </label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="body">Mensagem: </label>
+            <textarea name="body" id="body"required></textarea>
+
+            <button type="submit">Enviar Email</button>
+        </form>
+
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,36 +1,16 @@
-// Seletor de elemento por ID
-function puxarElementoPorId(){
-   const titulo = document.getElementById('meuTitulo');
-   console.log(titulo);
-   titulo.textContent = "Titulo alterado";
-}
+document.getElementById('emailForm').addEventListener("submit",
+   function(event) {
+      event.preventDefault();
+      
+      const to = document.getElementById("to").value;
+      const subject = document.getElementById("subject").value;
+      const body = document.getElementById("body").value;
 
-// Seletor de elemento por classe
-function puxarElementoPorClasse(){
-   const subtitulo = document.getElementsByClassName('subtitulo');
-   console.log(subtitulo);
-}
+      const mailtolink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-// Seletor de elemento por tag
-function puxarElementoPorTag(){
-   const paragrafos = document.getElementsByTagName('p');
-   console.log(paragrafos);
-}
-
-// Função para criar a lista
-function criarLista(){
-   const container = document.getElementById('lista-container');
-   container.innerHTML = 
-   `
-   <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-   </ul>
-   `;
-}
-
-function removerButao(){
-   const container = document.getElementById('lista-container');
-   container.innerHTML='';
-}
+      window.location.href = mailtolink;
+      //console.log(to);
+      //console.log(subject);
+      //console.log(body);
+   }
+);
