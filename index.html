@@ -2,26 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Aula formulário</title>
-        
+        <title>Aula animação</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
     </head>
     <body>
-        <h1>Formulário de email</h1>
+        <h1>Animação em JS</h1>
+        <div class="rotate" id="rotate-div"></div>
+        <button onclick="rotateElement()">Girar</button>
+
+        <br><br>
+
+        <div class="fade" id="fade-div"></div>
+        <button onclick="toggleFade()">Alternar Visibilidade</button>
+
+        <br><br>
+
+        <div class="pulse" id="pulse-div"></div>
+        <button onclick="togglePulse()">Alternar Pulsar</button>
         
-        <form id="emailForm">
+        <br><br>
 
-            <label for="to">Para: </label>
-            <input type="email" name="to" id="to" required>
+        <div class="zoom" id="zoom-div"></div>
+        <button onclick="zoomIn()">Ampliar</button>
 
-            <label for="subject">Assunto: </label>
-            <input type="text" id="subject" name="subject" required>
 
-            <label for="body">Mensagem: </label>
-            <textarea name="body" id="body"required></textarea>
-
-            <button type="submit">Enviar Email</button>
-        </form>
-
-        <script src="script.js"></script>
     </body>
 </html>

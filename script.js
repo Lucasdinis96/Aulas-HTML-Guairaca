@@ -1,16 +1,21 @@
-document.getElementById('emailForm').addEventListener("submit",
-   function(event) {
-      event.preventDefault();
-      
-      const to = document.getElementById("to").value;
-      const subject = document.getElementById("subject").value;
-      const body = document.getElementById("body").value;
+let rotationDegree = 0;
 
-      const mailtolink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+function rotateElement() {
+   rotationDegree += 45;
+   document.getElementById("rotate-div").style.transform = `rotate(${rotationDegree}deg)`;
+}
 
-      window.location.href = mailtolink;
-      //console.log(to);
-      //console.log(subject);
-      //console.log(body);
-   }
-);
+function toggleFade() {
+   const div = document.getElementById('fade-div');
+   div.classList.toggle('visible');
+}
+
+function togglePulse() {
+   const div = document.getElementById('pulse-div');
+   div.classList.toggle('pulsing');
+}
+
+function zoomIn() {
+   const div = document.getElementById('zoom-div');
+   div.classList.add('zooming')
+}
