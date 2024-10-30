@@ -1,21 +1,25 @@
-let rotationDegree = 0;
+let arrayPokemons;
 
-function rotateElement() {
-   rotationDegree += 45;
-   document.getElementById("rotate-div").style.transform = `rotate(${rotationDegree}deg)`;
+function getPokemon(){
+    fetch("https://pokeapi.co/api/v2/pokemon",{method: "GET",})
+    .then((response) => response.json())
+    .then((data) => {arrayPokemons= data.results;appendPokemons(arrayPokemons);})
+    .catch((error) => {console.error("Error", error);})
 }
 
-function toggleFade() {
-   const div = document.getElementById('fade-div');
-   div.classList.toggle('visible');
-}
+getPokemon();
 
-function togglePulse() {
-   const div = document.getElementById('pulse-div');
-   div.classList.toggle('pulsing');
-}
+function appendPokemons(pokemons) {
+    let place = document.querySelector("#data-output");
+    let out = " ";
 
-function zoomIn() {
-   const div = document.getElementById('zoom-div');
-   div.classList.add('zooming')
+    for (let pokemon of pokemons) {
+        out += `
+            <tr>
+                <td>${pokemon.name}</td>
+                <td>${pokemon.url}</td>
+            </tr>
+        `
+        }
+    place.innerHTML = out;
 }
