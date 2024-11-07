@@ -1,0 +1,90 @@
+@font-face{
+    font-family: "Font_Rick";
+    src: url(get_schwifty.ttf)
+}
+#background {
+    background-image: url(./Background.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    padding: 0px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    top: 0px;
+}
+.header h1 {
+    background-color: #51b3c9be;
+    padding: 10px;
+    border-radius: 5px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Font_Rick";
+    color: #bede49;
+    margin: 0px;
+}
+.main {
+    flex: 1
+    padding 80px 10px 40px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#grid {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    background-color: #51b3c9e1;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+img {
+    width: 350px;
+    height: 350px;
+    align-self: center;
+}
+li {
+    font-family: "Font_Rick";
+    color: #bede49;
+}
+.footer {
+    padding: 0px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+    top: 0px;
+}
+.footer h2{
+    background-color: #51b3c9be;
+    padding: 10px;
+    border-radius: 5px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Font_Rick";
+    color: #bede49;
+    margin: 0px;
+}
